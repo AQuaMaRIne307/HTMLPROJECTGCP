@@ -1,0 +1,147 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Background */
+body, html {
+    background-image: url(bg.jpg);
+    width: 100%;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(45deg, royalblue, purple);
+    background-size: 400% 400%;
+    animation: backgroundMotion 20s ease infinite;
+}
+
+/* Animation for Background */
+@keyframes backgroundMotion {
+    0% { background-position: 0 0; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0 0; }
+}
+
+/* Centered Container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Form Container */
+.form-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(0.95);
+    animation: formFadeIn 1s forwards;
+}
+
+h1 {
+    text-align: center;
+    color: royalblue;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: slideInFromTop 1s ease-out;
+}
+
+/* Input Fields */
+label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    display: block;
+    opacity: 0;
+    animation: fadeIn 1.2s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1.2rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    animation: fadeIn 1.2s ease-in-out forwards;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: royalblue;
+    outline: none;
+}
+
+/* Button Styling */
+button {
+    padding: 1rem 2rem;
+    background-color: royalblue;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 1.2s ease-in-out forwards;
+    animation-delay: 1.3s;
+}
+
+button:hover {
+    background-color: darkviolet;
+    transform: scale(1.1);
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Slide In Animation */
+@keyframes slideInFromTop {
+    0% { transform: translateY(-20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Form Fade In */
+@keyframes formFadeIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input, select, textarea {
+        padding: 0.6rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+}

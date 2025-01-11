@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Social Media</title>
+    <style>
+        /* General Body Styling */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            color: #fff;
+            background: linear-gradient(45deg, #4169e1, #f8f8f8);
+            overflow: hidden;
+            position: relative;
+            background-size: 200% 200%;
+            animation: gradientAnimation 5s ease infinite;
+        }
+
+        /* Gradient background motion */
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Centering content */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            text-align: center;
+        }
+
+        /* Title and description */
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 50px;
+            max-width: 600px;
+        }
+
+        /* Social media icons section */
+        .social-icons {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 2rem;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+            opacity: 0.8;
+        }
+
+        /* Social media icon logos */
+        .social-icons img {
+            width: 40px;
+            height: 40px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>Connect with us on social media to stay updated on the latest news, offers, and events.</p>
+
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/512px-Facebook_f_logo_%282019%29.svg.png" alt="Facebook">
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <img src="https://freelogopng.com/images/all_img/1690643591twitter-x-logo-png.png" alt="Twitter">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1024px-Instagram_icon.png" alt="Instagram">
+            </a>
+            <a href="https://www.linkedin.com" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/1024px-LinkedIn_icon.svg.png" alt="LinkedIn">
+            </a>
+            <a href="https://www.youtube.com" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube">
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.cdnfonts.com/css/game-of-squids" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/542bb456af90c620bc50b375166d10b4?family=LemonMilk" rel="stylesheet">
+    <title>Jobify - Find Your Dream Job</title>
+    <style>
+         @import url(https://db.onlinewebfonts.com/c/542bb456af90c620bc50b375166d10b4?family=LemonMilk); 
+         @import url('https://fonts.cdnfonts.com/css/game-of-squids');
+      body {
+          font-family: Arial, sans-serif;
+          background-color: #f8f4f4;
+          margin: 0;
+          padding: 0;
+          background-image: url(bg.jpg);
+          background-position: center;
+      }
+      header {
+          box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
+          font-family: 'Game of squids',sans-serif;
+          font-size: 14px;
+          text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+          background-color: #5c0a6b; /* Royal Purple */
+          color: wheat;
+          padding: 20px 0;
+          text-align: center;
+      }
+      header h1 {
+          font-family: 'Game Of Squids' , sans-serif;
+         -webkit-text-stroke-width: 1.5px;
+         -webkit-text-stroke-color: #9f074c;
+          text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+          margin: 0;
+          font-size: 2.5em;
+      }
+      nav {
+          position: sticky;
+          top: 0px;
+          font-family: "LemonMilk";
+          position: sticky;
+          text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+          background-color: #5c0a6b;
+          padding: 10px;
+          text-align: center;
+      }
+      nav a{
+          position: sticky;
+          top: 10px;
+          color: wheat;
+          margin: 0 20px;
+          text-decoration: none;
+          font-size: 1.1em;
+      }
+      nav a:hover {
+          transform: translateY(-2px);
+          color: peachpuff;
+          text-shadow: 3px 3px 8px rgba(0, 0, 0, 1);
+          text-decoration: underline;
+          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+          text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.5);
+      }
+      .main-content {
+          color: wheat;
+          text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+          padding: 50px;
+          text-align: center;
+      }
+      .main-content h2 {
+          -webkit-text-stroke-width: 0.00000005px;
+          -webkit-text-stroke-color:wheat;
+          font-family: 'Game of squids',sans-serif;
+          text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+          color: #5c0a6f; 
+          font-size: 2em;
+      }
+      .job-listings {
+          text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 30px;
+          margin-top: 30px;
+      }
+      .job-card:hover{
+          border-style: double;
+          border-color: #5c0a6b;
+          text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+          background-color: wheat;
+          box-shadow: 3px 4px 10px rgba(0, 0, 0, 1);
+          text-align: center;
+      }
+      .job-card {
+          border-style: double;
+          border-color: #5c0a6b;
+          text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+          background-color: wheat;
+          border-radius: 50px;
+          box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.5);
+          padding: 10px;
+          text-align: center;
+      }
+      .job-card h3 {
+          text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+          color: #5c0a6b;
+          font-size: 1.5em;
+          margin-bottom: 10px;
+      }
+      h3:hover{
+          text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+          color: #5c0a6b;
+          font-size: 1.5em;
+          margin-bottom: 10px;
+      }
+      .job-card p {
+        color: wheat;
+          text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+          font-size: 1em;
+          color: #333;
+          margin-bottom: 20px;
+      }
+      .job-card a {
+        
+          text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+          background-color: #5c0a6b;
+          color: white;
+          padding: 10px 20px;
+          border-radius: 25px;
+          text-decoration: none;
+          font-weight: bold;
+          
+      }
+      .job-card a:hover {
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+        background-color: #6f074a;
+        color: wheat;
+      }
+      footer {
+          text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+          background-color: #5c0a6b;
+          color: white;
+          padding: 20px 0;
+          text-align: center;
+      }
+      footer a {
+          font-size: 14px;
+          font-family: "LemonMilk";
+          border-left: 3px solid white;
+          padding-left: 3px;
+          position: relative;
+          display: inline-block;
+          cursor: pointer;
+          text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+          color: white;
+          text-decoration: none;
+          margin: 0 15px;
+      }
+      footer a:hover {    
+          transform: translateY(-2px);  
+          text-decoration: underline;
+      }
+      .about-section {
+          text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+          color: #5c0a6a;
+          padding: 50px 20px;
+          text-align: center;
+      }
+      .about-section h2 {
+          -webkit-text-stroke-width: 0.00000005px;
+          -webkit-text-stroke-color:wheat;
+          font-family: 'Game of squids',sans-serif;
+          font-size: 2em;
+          margin-bottom: 20px;
+      }
+      .about-section p {
+          font-size: 1em;
+          max-width: 800px;
+          margin: 0 auto;
+          color: wheat;
+      }
+      </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Jobify</h1>
+        <p1>"Your Dream Job Awaits You"</p1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav id="ani">
+        <a href="#home">Home</a>
+        <a href="http://127.0.0.1:5500/Proj_jobs.html" target="_blank">Jobs</a>
+        <a href="http://127.0.0.1:5500/Proj_about.html" target="_blank">About</a>
+        <a href="http://127.0.0.1:5500/Proj_cont.html" target="_blank">Contact</a>
+    </nav>
+
+    <!-- Main Content Section -->
+    <div class="main-content" id="home">
+        <h2>Welcome to Jobify</h2>
+        <p>Your journey towards your dream career starts here. Explore a variety of job opportunities that match your skills and passion.</p>
+        <div class="job-listings">
+            <!-- Job Listing 1 -->
+            <div class="job-card" id="job">
+                <h3>Frontend Developer</h3>
+                <p>Join our dynamic team to build and innovate in the world of web development.</p>
+                <a href="http://127.0.0.1:5500/Proj_form.html" target="_blank">Apply Now</a>
+            </div>
+            <!-- Job Listing 2 -->
+            <div class="job-card" id="job">
+                <h3>Data Analyst</h3>
+                <p>Help us make sense of data and provide valuable insights to guide business decisions.</p>
+                <a href="http://127.0.0.1:5500/Proj_form.html" target="_blank">Apply Now</a>
+            </div>
+            <!-- Job Listing 3 -->
+            <div class="job-card" id="job">
+                <h3>Project Manager</h3>
+                <p>Lead and manage projects from conception to delivery in a fast-paced environment.</p>
+                <a href="http://127.0.0.1:5500/Proj_form.html" target="_blank">Apply Now</a>
+            </div>
+             <div class="job-card" id="job">
+                <h3>Backend Developer</h3>
+                <p>focuses on creating and maintaining the server-side components of web applications.</p>
+                <a href="http://127.0.0.1:5500/Proj_form.html" target="_blank">Apply Now</a>
+            </div>
+            <div class="job-card"id="job">
+                <h3>Cyber Security</h3>
+                <p> individuals will reduce the risk of cyber attack.</p>
+                <a href="http://127.0.0.1:5500/Proj_form.html" onclick="myFunction()" target="_blank">Apply Now</a>
+            </div>
+            <div class="job-card"id="job">
+                <h3>Software Developer</h3>
+                <p> Design, develop, and maintain software applications. They write code, test programs, and ensure software runs smoothly.</p>
+                <a href="http://127.0.0.1:5500/Proj_form.html" onclick="myFunction()" target="_blank">Apply Now</a>
+            </div>
+            <div class="job-card"id="job">
+                <h3>Graphic Designer</h3>
+                <p>Create visual content for websites, advertising, branding, and print materials. They use design software to communicate ideas and concepts visually.</p>
+                <a href="http://127.0.0.1:5500/Proj_form.html" onclick="myFunction()" target="_blank">Apply Now</a>
+            </div>
+            <div class="job-card"id="job">
+                <h3>Marketing Manager</h3>
+                <p>Plan and execute marketing strategies to promote products or services. They analyze market trends, manage advertising campaigns, and coordinate with sales teams.</p>
+                <a href="http://127.0.0.1:5500/Proj_form.html" onclick="myFunction()" target="_blank">Apply Now</a>
+            </div>
+            <div class="job-card"id="job">
+                <h3>SEO Specialist</h3>
+                <p> Optimize website content and structure to improve search engine rankings. They research keywords, analyze site traffic, and implement SEO strategies.</p>
+                <a href="http://127.0.0.1:5500/Proj_form.html" onclick="myFunction()" target="_blank">Apply Now</a>
+            </div>
+            <div class="job-card"id="job">
+                <h3>Accountant</h3>
+                <p>Manage financial records, prepare tax filings, and ensure compliance with financial regulations. Accountants help track income, expenses, and profitability.</p>
+                <a href="http://127.0.0.1:5500/Proj_form.html" onclick="myFunction()" target="_blank">Apply Now</a>
+            </div>
+            <div class="job-card"id="job">
+                <h3>Operations Manager</h3>
+                <p>Oversee daily operations, improve efficiency, and ensure company processes are streamlined. They manage resources, budgets, and staff to meet organizational goals.</p>
+                <a href="http://127.0.0.1:5500/Proj_form.html" onclick="myFunction()" target="_blank">Apply Now</a>
+            </div>
+            <div class="job-card"id="job">
+                <h3>Legal Assistant</h3>
+                <p> Assist lawyers with research, case preparation, and administrative tasks. Legal assistants may draft documents, schedule meetings, and manage legal files.</p>
+                <a href="http://127.0.0.1:5500/Proj_form.html" onclick="myFunction()" target="_blank">Apply Now</a>
+            </div>
+            <div class="job-card"id="job">
+                <h3>Human Resources (HR) Specialist</h3>
+                <p>Manage recruitment, employee relations, payroll, and benefits. HR specialists ensure compliance with labor laws and assist in employee development.</p>
+                <a href="http://127.0.0.1:5500/Proj_form.html" onclick="myFunction()" target="_blank">Apply Now</a>
+            </div>
+            <div class="job-card"id="job">
+                <h3>Public Relations Specialist</h3>
+                <p>Manage an organization’s public image, handle media relations, and develop communication strategies to enhance brand visibility.</p>
+                <a href="http://127.0.0.1:5500/Proj_form.html" onclick="myFunction()" target="_blank">Apply Now</a>
+            </div>
+            <div class="job-card"id="job">
+                <h3>Real Estate Agent</h3>
+                <p>Assist clients in buying, selling, or renting properties. Real estate agents provide advice, show properties, and negotiate deals.</p>
+                <a href="http://127.0.0.1:5500/Proj_form.html" onclick="myFunction()" target="_blank">Apply Now</a>
+            </div>
+        </div>
+    </div>
+    <!-- About Section -->
+    <div class="about-section" id="about">
+        <h2>About Us</h2>
+        <p>Jobify is a premier online job portal designed to connect talented professionals with employers seeking the perfect fit. Whether you're a recent graduate or an experienced executive, we help you take the next step in your career. We strive to provide a user-friendly platform with comprehensive tools for both job seekers and employers.</p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Jobify | All Rights Reserved</p>
+        <a href="#home">Home</a><vr>
+        <a href="http://127.0.0.1:5500/Proj_jobs.html" target="_blank">Jobs</a><vr>
+        <a href="http://127.0.0.1:5500/Proj_about.html" target="_blank">About</a>
+        <a href="http://127.0.0.1:5500/Proj_cont.html" target="_blank">Contact</a>
+    </footer>
+</body>
+</html>
